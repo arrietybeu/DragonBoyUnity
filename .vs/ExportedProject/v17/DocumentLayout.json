@@ -3,28 +3,52 @@
   "WorkspaceRootPath": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|c:\\users\\win val\\desktop\\exportedproject\\assets\\scripts\\assembly-csharp\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\controller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|c:\\users\\win val\\desktop\\exportedproject\\assets\\scripts\\assembly-csharp\\gamescr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\gamescr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\msystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\msystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\assets\\src\\f\\controller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\assets\\src\\f\\controller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\service.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\session_me.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|c:\\users\\win val\\desktop\\exportedproject\\assets\\scripts\\assembly-csharp\\session_me.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\session_me.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\serverlistscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\serverlistscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|c:\\users\\win val\\desktop\\exportedproject\\assets\\scripts\\assembly-csharp\\loginscr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\loginscr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\assets\\src\\f\\controller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\assets\\src\\f\\controller2.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\ninjautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\ninjautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\smallimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\smallimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\itemtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\itemtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\gamescr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\gamescr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\msystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\msystem.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\message.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -43,10 +67,6 @@
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\res.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\loginscr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\loginscr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\bgitemmn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\bgitemmn.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
@@ -63,28 +83,8 @@
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\panel.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\serverlistscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\serverlistscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\assets\\src\\g\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\assets\\src\\g\\registerscreen.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\itemtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\itemtemplate.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\ninjautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\ninjautil.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\command.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\smallimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\smallimage.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\selectcharscr.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -177,10 +177,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\timer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|C:\\Users\\Win Val\\Desktop\\ExportedProject\\assets\\scripts\\assembly-csharp\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{5BB7E9B2-DAAC-E6A6-6D4C-F52FF86D00FA}|Assembly-CSharp.csproj|solutionrelative:assets\\scripts\\assembly-csharp\\image.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
   ],
   "DocumentGroupContainers": [
@@ -189,9 +185,36 @@
       "VerticalTabListWidth": 256,
       "DocumentGroups": [
         {
-          "DockedWidth": 471,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 517,
+          "SelectedChildIndex": 2,
           "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "LoginScr.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
+              "ViewState": "AgIAALkBAAAAAAAAAAAcwMQBAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-11-25T23:55:16.719Z",
+              "IsPinned": true,
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 4,
+              "Title": "ServerListScreen.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
+              "ViewState": "AgIAAJQEAAAAAAAAAADgv6oEAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-05T09:14:44.943Z",
+              "EditorCaption": ""
+            },
             {
               "$type": "Document",
               "DocumentIndex": 0,
@@ -200,50 +223,26 @@
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Controller.cs",
               "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Controller.cs",
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Controller.cs",
-              "ViewState": "AgIAAO4WAAAAAAAAAAAQwAcXAAAhAAAAAAAAAA==",
+              "ViewState": "AgIAANEAAAAAAAAAAAAAAOgAAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-10T14:14:07.213Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
-              "Title": "CmdReflection.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
-              "ViewState": "AgIAABwAAAAAAAAAAAAgwAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T11:50:43.219Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "LoginScr.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\LoginScr.cs",
-              "ViewState": "AgIAANUBAAAAAAAAAAAAwOcBAAADAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-25T23:55:16.719Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 6,
               "Title": "Controller2.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\f\\Controller2.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\f\\Controller2.cs",
               "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\f\\Controller2.cs",
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\f\\Controller2.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAABQAAAAeAAAAAAAAAA==",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAA8AAAAZAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-02T01:34:18.709Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 20,
               "Title": "RegisterScreen.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\g\\RegisterScreen.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Assets\\src\\g\\RegisterScreen.cs",
@@ -252,18 +251,6 @@
               "ViewState": "AgIAALsBAAAAAAAAAAAEwNUBAAApAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T22:34:57.648Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 15,
-              "Title": "ServerListScreen.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\ServerListScreen.cs",
-              "ViewState": "AgIAAAACAAAAAAAAAAAawBgCAAApAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-05T09:14:44.943Z"
             },
             {
               "$type": "Document",
@@ -280,6 +267,30 @@
             {
               "$type": "Document",
               "DocumentIndex": 8,
+              "Title": "SmallImage.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
+              "ViewState": "AgIAAEoAAAAAAAAAAAAqwFwAAABEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-02T04:45:30.137Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 23,
+              "Title": "CmdReflection.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\CmdReflection.cs",
+              "ViewState": "AgIAABwAAAAAAAAAAAAgwAkAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-26T11:50:43.219Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
               "Title": "Skills.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Skills.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Skills.cs",
@@ -291,7 +302,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 16,
               "Title": "BgItemMn.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\BgItemMn.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\BgItemMn.cs",
@@ -300,18 +311,6 @@
               "ViewState": "AgIAAAAAAAAAAAAAAAAAAAwAAAADAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-01-23T00:59:01.212Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
-              "Title": "SmallImage.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\SmallImage.cs",
-              "ViewState": "AgIAAF8AAAAAAAAAAAAYwGoAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-02T04:45:30.137Z"
             },
             {
               "$type": "Document",
@@ -504,28 +503,42 @@
               "ViewState": "AgIAAAMAAAAAAAAAAAAUwAoAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-11-29T21:54:02.54Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 44,
-              "Title": "Image.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Image.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Image.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Image.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Image.cs",
-              "ViewState": "AgIAAPYAAAAAAAAAAAASwP0AAAAtAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-11-28T10:37:19.502Z"
             }
           ]
         },
         {
-          "DockedWidth": 292,
-          "SelectedChildIndex": 0,
+          "DockedWidth": 246,
+          "SelectedChildIndex": 1,
           "Children": [
             {
               "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Command.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Command.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Command.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Command.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Command.cs",
+              "ViewState": "AgIAAGkAAAAAAAAAAAASwG4AAAACAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-01T21:30:07.82Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 1,
+              "Title": "Service.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Service.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Service.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Service.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Service.cs",
+              "ViewState": "AgIAAFcDAAAAAAAAAAAiwGYDAAAWAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-12T23:23:50.059Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "GameScr.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\GameScr.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\GameScr.cs",
@@ -533,60 +546,48 @@
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\GameScr.cs",
               "ViewState": "AgIAAH0aAAAAAAAAAAAuwJEaAAAdAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T23:34:54.174Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-12-12T23:34:54.174Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "mSystem.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
-              "ViewState": "AgIAAKMAAAAAAAAAAAAcwLYAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T18:43:06.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Service.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Service.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Service.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Service.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Service.cs",
-              "ViewState": "AgIAAEcEAAAAAAAAAAAwwGQEAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-12T23:23:50.059Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Res.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Res.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Res.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Res.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Res.cs",
-              "ViewState": "AgIAAIcAAAAAAAAAAAAuwKwAAAAUAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-23T10:01:41.488Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
               "Title": "Session_ME.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Session_ME.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Session_ME.cs",
               "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Session_ME.cs",
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Session_ME.cs",
-              "ViewState": "AgIAAEQBAAAAAAAAAAAcwFkBAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAAFABAAAAAAAAAAAAAFcBAAAiAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-26T12:45:02.967Z"
+              "WhenOpened": "2024-12-26T12:45:02.967Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 6,
+              "DocumentIndex": 7,
+              "Title": "NinjaUtil.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
+              "ViewState": "AgIAABUAAAAAAAAAAAAiwCwAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-12-27T18:29:16.968Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "ItemTemplate.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
+              "ViewState": "AgIAAA4AAAAAAAAAAADgvxwAAAAHAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-11T01:13:22.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
               "Title": "Message.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Message.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Message.cs",
@@ -598,7 +599,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 15,
+              "Title": "Res.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Res.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Res.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Res.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Res.cs",
+              "ViewState": "AgIAAIcAAAAAAAAAAAAuwKwAAAAUAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-23T10:01:41.488Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "mSystem.cs",
+              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
+              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
+              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
+              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\mSystem.cs",
+              "ViewState": "AgIAAKMAAAAAAAAAAAAcwLYAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-01-12T18:43:06.232Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
               "Title": "GameCanvas.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\GameCanvas.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\GameCanvas.cs",
@@ -610,7 +635,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 17,
               "Title": "Cout.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Cout.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Cout.cs",
@@ -622,19 +647,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "ItemTemplate.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\ItemTemplate.cs",
-              "ViewState": "AgIAAAoAAAAAAAAAAAAuwB0AAABhAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-11T01:13:22.232Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 18,
               "Title": "mGraphics.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\mGraphics.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\mGraphics.cs",
@@ -646,7 +659,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 19,
               "Title": "Panel.cs",
               "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Panel.cs",
               "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Panel.cs",
@@ -654,8 +667,7 @@
               "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Panel.cs",
               "ViewState": "AgIAAJYDAAAAAAAAAAAuwKgDAAAQAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-01-12T23:39:06.594Z",
-              "EditorCaption": ""
+              "WhenOpened": "2025-01-12T23:39:06.594Z"
             },
             {
               "$type": "Document",
@@ -668,30 +680,6 @@
               "ViewState": "AgIAAI4DAAAAAAAAAAAwwKgDAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2024-12-03T01:25:20.62Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
-              "Title": "NinjaUtil.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\NinjaUtil.cs",
-              "ViewState": "AgIAACsBAAAAAAAAAAAawEUBAAAeAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-27T18:29:16.968Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "Command.cs",
-              "DocumentMoniker": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Command.cs",
-              "RelativeDocumentMoniker": "Assets\\Scripts\\Assembly-CSharp\\Command.cs",
-              "ToolTip": "C:\\Users\\Win Val\\Desktop\\ExportedProject\\Assets\\Scripts\\Assembly-CSharp\\Command.cs",
-              "RelativeToolTip": "Assets\\Scripts\\Assembly-CSharp\\Command.cs",
-              "ViewState": "AgIAADcAAAAAAAAAAAAswEUAAAACAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-12-01T21:30:07.82Z"
             },
             {
               "$type": "Document",

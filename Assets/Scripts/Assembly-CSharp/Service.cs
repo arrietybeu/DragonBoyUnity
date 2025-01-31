@@ -865,7 +865,7 @@ public class Service
 
     public void login(string username, string pass, string version, sbyte type)
     {
-        Res.outz("Login " + username + " " + pass + " " + version);
+        UnityEngine.Debug.LogError("Login " + username + " " + pass + " " + version);
         try
         {
             Message message = messageNotLogin(0);

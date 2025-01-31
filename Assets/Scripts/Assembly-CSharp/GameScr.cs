@@ -1489,7 +1489,7 @@ public class GameScr : mScreen, IChatable
         DataInputStream dataInputStream = null;
         try
         {
-            string filepath = "E://SQL//parts.sql";
+            string filepath = "F://SQL//parts.sql";
 
 
             dataInputStream = new DataInputStream(Rms.loadRMS("NR_part"));
@@ -1506,7 +1506,7 @@ public class GameScr : mScreen, IChatable
                     parts[i].pi[j].dx = dataInputStream.readByte();
                     parts[i].pi[j].dy = dataInputStream.readByte();
 
-                    string file = "E://SQL//part_images.sql";
+                    string file = "F://SQL//part_images.sql";
 
                     string qr = $"INSERT INTO part_images(id, part_id, image_id , dx, dy) VALUE (" +
                         $"{j}," +
@@ -1704,9 +1704,9 @@ public class GameScr : mScreen, IChatable
 
     public void readSkill()
     {
-        string filepath = "E://SQL//skill_paint.sql";
-        string file = "E://SQL//skill_stand.sql";
-        string f = "E://SQL//skill_fly.sql";
+        string filepath = "F://SQL//skill_paint.sql";
+        string file = "F://SQL//skill_stand.sql";
+        string f = "F://SQL//skill_fly.sql";
         DataInputStream dataInputStream = null;
         try
         {

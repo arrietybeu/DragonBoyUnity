@@ -88,9 +88,9 @@ public class SmallImage
 				smallImg[j][4] = dataInputStream.readShort();
 			}
 
-            string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources/data/update_data";
-            string cc = Path.Combine(basePath, $"NR_image.json");
-            string write = JsonConvert.SerializeObject((object)smallImg);
+            //string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources/data/update_data";
+            //string cc = Path.Combine(basePath, $"NR_image.json");
+            //string write = JsonConvert.SerializeObject((object)smallImg);
             //File.AppendAllText(cc, write);
         }
 		catch (Exception ex)

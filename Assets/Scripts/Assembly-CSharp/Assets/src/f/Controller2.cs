@@ -510,10 +510,10 @@ namespace Assets.src.f
                                 ImageSource.vSource.addElement(new ImageSource(iD, version));
                                 //UnityEngine.Debug.LogError("ID= " + iD + " version= " + version);
                             }
-                            string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                            string file = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "image_source", $"image_source_{mGraphics.zoomewver}");
+                            //string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                            //string file = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "image_source", $"image_source_{mGraphics.zoomewver}");
 
-                            File.WriteAllBytes(file, Array.ConvertAll(msg.reader().buffer, (sbyte a) => (byte)a));
+                            //File.WriteAllBytes(file, Array.ConvertAll(msg.reader().buffer, (sbyte a) => (byte)a));
 
                             ImageSource.checkRMS();
                             ImageSource.saveRMS();

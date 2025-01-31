@@ -201,14 +201,14 @@ public class Controller : IMessageHandler
                             {
                                 break;
                             }
-                            sbyte b59 = msg.reader().readByte();
+                            sbyte b59 = msg.reader().readByte();// count tab
                             Char.myCharz().infoSpeacialSkill = new string[b59][];
                             Char.myCharz().imgSpeacialSkill = new short[b59][];
                             GameCanvas.panel.speacialTabName = new string[b59][];
                             for (int num131 = 0; num131 < b59; num131++)
                             {
                                 GameCanvas.panel.speacialTabName[num131] = new string[2];
-                                string[] array10 = Res.split(msg.reader().readUTF(), "\n", 0);
+                                string[] array10 = Res.split(msg.reader().readUTF(), "\n", 0);// tab Nội tại
                                 if (array10.Length == 2)
                                 {
                                     GameCanvas.panel.speacialTabName[num131] = array10;
@@ -218,13 +218,18 @@ public class Controller : IMessageHandler
                                     GameCanvas.panel.speacialTabName[num131][0] = array10[0];
                                     GameCanvas.panel.speacialTabName[num131][1] = string.Empty;
                                 }
-                                int num132 = msg.reader().readByte();
+                                int num132 = msg.reader().readByte();//  size index skill
                                 Char.myCharz().infoSpeacialSkill[num131] = new string[num132];
                                 Char.myCharz().imgSpeacialSkill[num131] = new short[num132];
                                 for (int num133 = 0; num133 < num132; num133++)
                                 {
-                                    Char.myCharz().imgSpeacialSkill[num131][num133] = msg.reader().readShort();
-                                    Char.myCharz().infoSpeacialSkill[num131][num133] = msg.reader().readUTF();
+                                    Char.myCharz().imgSpeacialSkill[num131][num133] = msg.reader().readShort();// icon
+                                    Char.myCharz().infoSpeacialSkill[num131][num133] = msg.reader().readUTF();// info
+                                    var file = "C:\\Users\\Win Val\\Desktop\\Nro_244\\Log\\log.txt";
+                                    using (StreamWriter writer = new StreamWriter(file, true))
+                                    {
+                                        writer.WriteLine($"Icon: {Char.myCharz().imgSpeacialSkill[num131][num133]} - Info: {Char.myCharz().infoSpeacialSkill[num131][num133]}");
+                                    }
                                 }
                             }
                             GameCanvas.panel.tabName[25] = GameCanvas.panel.speacialTabName;
@@ -916,9 +921,9 @@ public class Controller : IMessageHandler
                     }
                 case -82:
                     {
-                        var filepath = "E://SQL//tile_set_info.sql";
-                        var filemew = "E://SQL//tile_type.sql";
-                        var filemew2 = "E://SQL//tile_index.sql";
+                        var filepath = "F://SQL//tile_set_info.sql";
+                        var filemew = "F://SQL//tile_type.sql";
+                        var filemew2 = "F://SQL//tile_index.sql";
                         sbyte b28 = msg.reader().readByte();
                         TileMap.tileIndex = new int[b28][][];
                         TileMap.tileType = new int[b28][];
@@ -1764,25 +1769,33 @@ public class Controller : IMessageHandler
                         break;
                     }
                 case -42:
-                    Char.myCharz().cHPGoc = msg.readInt3Byte();
-                    Char.myCharz().cMPGoc = msg.readInt3Byte();
-                    Char.myCharz().cDamGoc = msg.reader().readInt();
-                    Char.myCharz().cHPFull = msg.reader().readLong();
-                    Char.myCharz().cMPFull = msg.reader().readLong();
-                    Char.myCharz().cHP = msg.reader().readLong();
-                    Char.myCharz().cMP = msg.reader().readLong();
-                    Char.myCharz().cspeed = msg.reader().readByte();
-                    Char.myCharz().hpFrom1000TiemNang = msg.reader().readByte();
-                    Char.myCharz().mpFrom1000TiemNang = msg.reader().readByte();
-                    Char.myCharz().damFrom1000TiemNang = msg.reader().readByte();
-                    Char.myCharz().cDamFull = msg.reader().readLong();
-                    Char.myCharz().cDefull = msg.reader().readLong();
-                    Char.myCharz().cCriticalFull = msg.reader().readByte();
-                    Char.myCharz().cTiemNang = msg.reader().readLong();
-                    Char.myCharz().expForOneAdd = msg.reader().readShort();
-                    Char.myCharz().cDefGoc = msg.reader().readInt();
-                    Char.myCharz().cCriticalGoc = msg.reader().readByte();
-                    InfoDlg.hide();
+                    try
+                    {
+                        Char.myCharz().cHPGoc = msg.readInt3Byte();
+                        Char.myCharz().cMPGoc = msg.readInt3Byte();
+                        Char.myCharz().cDamGoc = msg.reader().readInt();
+                        Char.myCharz().cHPFull = msg.reader().readLong();
+                        Char.myCharz().cMPFull = msg.reader().readLong();
+                        Char.myCharz().cHP = msg.reader().readLong();
+                        Char.myCharz().cMP = msg.reader().readLong();
+                        Char.myCharz().cspeed = msg.reader().readByte();
+                        Char.myCharz().hpFrom1000TiemNang = msg.reader().readByte();
+                        Char.myCharz().mpFrom1000TiemNang = msg.reader().readByte();
+                        Char.myCharz().damFrom1000TiemNang = msg.reader().readByte();
+                        Char.myCharz().cDamFull = msg.reader().readLong();
+                        Char.myCharz().cDefull = msg.reader().readLong();
+                        Char.myCharz().cCriticalFull = msg.reader().readByte();
+                        Char.myCharz().cTiemNang = msg.reader().readLong();
+                        Char.myCharz().expForOneAdd = msg.reader().readShort();
+                        Char.myCharz().cDefGoc = msg.reader().readInt();
+                        Char.myCharz().cCriticalGoc = msg.reader().readByte();
+
+                        InfoDlg.hide();
+                    }
+                    catch (Exception ex)  
+                    {
+                        Debug.LogError("Loi doc tin nhan: " + ex.StackTrace);
+                    }
                     break;
                 case 1:
                     {
@@ -2776,18 +2789,18 @@ public class Controller : IMessageHandler
                             {
                                 array11[num141] = msg.reader().readByte();
                             }
-                            if (array11 != null)
-                            {
-                                string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                                string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "image_background", $"{num139}.png");
+                            //if (array11 != null)
+                            //{
+                            //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                            //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "image_background", $"{num139}.png");
 
-                                Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                            //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                                using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                                {
-                                    fileStream.Write((byte[])(Array)array11, 0, array11.Length);
-                                }
-                            }
+                            //    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                            //    {
+                            //        fileStream.Write((byte[])(Array)array11, 0, array11.Length);
+                            //    }
+                            //}
                             image = Image.createImage(array11, 0, num140);
                             BgItem.imgNew.put(num139 + string.Empty, image);
                         }
@@ -3657,7 +3670,7 @@ public class Controller : IMessageHandler
                         TileMap.vItemBg.removeAllElements();
                         short num61 = msg.reader().readShort();
                         Res.err("[ITEM_BACKGROUND] nItem= " + num61);
-                        string riete = "E://SQL//item_background.sql";
+                        string riete = "F://SQL//item_background.sql";
                         for (int num62 = 0; num62 < num61; num62++)
                         {
                             BgItem bgItem = new BgItem();
@@ -4612,7 +4625,7 @@ public class Controller : IMessageHandler
         try
         {
             Debug.LogWarning("create skill: " + dis.available() + " sbyte");
-            var log = "E://SQL//log.txt";
+            var log = "F://SQL//log.txt";
 
             GameScr.vcSkill = dis.readByte();// version skill
 
@@ -4693,9 +4706,9 @@ public class Controller : IMessageHandler
     {
         try
         {
-            string filepath = "E://SQL//map_template.sql";
-            string file = "E://SQL//monster_template.sql";
-            string f = "E://SQL//npc_template.sql";
+            string filepath = "F://SQL//map_template.sql";
+            string file = "F://SQL//monster_template.sql";
+            string f = "F://SQL//npc_template.sql";
             GameScr.vcMap = dis.readByte();
             TileMap.mapNames = new string[dis.readShort()];
             for (int i = 0; i < TileMap.mapNames.Length; i++)
@@ -5013,7 +5026,7 @@ public class Controller : IMessageHandler
             num = msg.reader().readByte();
             Mob.newMob.removeAllElements();
 
-            string sql = "E://SQL//map_monsters.sql";
+            string sql = "F://SQL//map_monsters.sql";
             for (sbyte b = 0; b < num; b++)
             {
                 var isDisable = msg.reader().readBoolean();
@@ -5576,7 +5589,7 @@ public class Controller : IMessageHandler
                         sbyte b4 = msg.reader().readByte();
                         Res.outz("CAPTION LENT= " + b4);
                         GameScr.exps = new long[b4];
-                        var querry = "E://SQL//caption.sql";
+                        var querry = "F://SQL//caption.sql";
                         for (int j = 0; j < GameScr.exps.Length; j++)
                         {
                             GameScr.exps[j] = msg.reader().readLong();
@@ -6480,7 +6493,7 @@ public class Controller : IMessageHandler
     private void loadItemNew(myReader d, sbyte type, bool isSave)
     {
 
-        string s = "E://SQL//item_template.sql";// 1 = ItemTemplate
+        string s = "F://SQL//item_template.sql";// 1 = ItemTemplate
         try
         {
             d.mark(1_000_000);
@@ -6509,7 +6522,7 @@ public class Controller : IMessageHandler
             }
             else if (type == 1)
             {
-                //string basePath = @"E:/NR_item";
+                //string basePath = @"F:/NR_item";
                 //File.WriteAllBytes(basePath, Array.ConvertAll(d.buffer, (sbyte a) => (byte)a));
 
                 ItemTemplates.itemTemplates.clear();
@@ -6600,11 +6613,11 @@ public class Controller : IMessageHandler
     //private void loadItemNew(myReader dis, sbyte type, bool isSave)
     //{
 
-    //    string sql = "E://SQL//item_option_template.sql";// 0 = item option template
+    //    string sql = "F://SQL//item_option_template.sql";// 0 = item option template
 
-    //    string s = "E://SQL//item_template.sql";// 1 = ItemTemplate
+    //    string s = "F://SQL//item_template.sql";// 1 = ItemTemplate
 
-    //    string l = "E://SQL//item_option_template.sql"; // 101Arr_Head_FlyMove
+    //    string l = "F://SQL//item_option_template.sql"; // 101Arr_Head_FlyMove
     //    try
     //    {
     //        dis.mark(1000000);
@@ -6680,7 +6693,7 @@ public class Controller : IMessageHandler
     //            case 101:
     //                try
     //                {
-    //                    string keke = "E://SQL//item_head_move.sql";
+    //                    string keke = "F://SQL//item_head_move.sql";
     //                    int num2 = dis.readShort();
     //                    Char.Arr_Head_FlyMove = new short[num2];
     //                    for (int k = 0; k < num2; k++)
@@ -6736,7 +6749,7 @@ public class Controller : IMessageHandler
 
     private int[][] readArrHead(myReader d)
     {
-        string sql = "E://SQL//item_head.sql";
+        string sql = "F://SQL//item_head.sql";
 
         int[][] array = new int[1][] { new int[2] { 542, 543 } };
         try

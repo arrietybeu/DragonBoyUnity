@@ -42,7 +42,7 @@ public class ItemTemplate
         this.part = part;
         this.isUpToUp = isUpToUp;
 
-        string filepath = "E://SQL//item_template.sql";
+        string filepath = "F://SQL//item_template.sql";
 
         string querry = $"INSERT INTO item_template(id, type, gender, name, description, level, strRequire, icon_id, part, is_up_top)" +
             $" VALUE ({this.id}, {this.type}, {this.gender}, '{this.name}', '{this.description}', {this.level}, {this.strRequire}, {this.iconID}, {this.part}, {this.isUpToUp});\n";

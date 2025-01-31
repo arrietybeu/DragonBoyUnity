@@ -32,30 +32,30 @@ public class NinjaUtil
                 sbyte[] data = new sbyte[num];
                 msg.reader().read(ref data);
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "icon", $"{num156}.png");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "icon", $"{num156}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream.Write((byte[])(Array)data, 0, data.Length);
-                    }
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "icon", $"{num156}.png");
+                //    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream.Write((byte[])(Array)data, 0, data.Length);
+                //    }
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "icon", $"{num156}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream2.WriteByte(1);
-                    }
-                }
+                //    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream2.WriteByte(1);
+                //    }
+                //}
 
                 return data;
             }
@@ -76,30 +76,30 @@ public class NinjaUtil
                 sbyte[] data = new sbyte[num];
                 msg.reader().read(ref data);
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "img_by_name", $"{name}.png");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "img_by_name", $"{name}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream.Write((byte[])(Array)data, 0, data.Length);
-                    }
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "img_by_name", $"{name}.png");
+                //    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream.Write((byte[])(Array)data, 0, data.Length);
+                //    }
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "img_by_name", $"{name}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream2.WriteByte(1);
-                    }
-                }
+                //    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream2.WriteByte(1);
+                //    }
+                //}
 
                 return data;
             }
@@ -120,30 +120,30 @@ public class NinjaUtil
                 sbyte[] data = new sbyte[num];
                 msg.reader().read(ref data);
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/image", $"{id}.png");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/image", $"{id}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream.Write((byte[])(Array)data, 0, data.Length);
-                    }
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/image", $"{id}.png");
+                //    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream.Write((byte[])(Array)data, 0, data.Length);
+                //    }
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/image", $"{id}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream2.WriteByte(1);
-                    }
-                }
+                //    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream2.WriteByte(1);
+                //    }
+                //}
 
                 return data;
             }
@@ -164,20 +164,20 @@ public class NinjaUtil
                 sbyte[] data = new sbyte[num];
                 msg.reader().read(ref data);
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/data", $"{id}");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/data", $"{id}");
 
-                    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/data", $"{id}");
+                //    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "effect/data", $"{id}");
 
-                    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
-                }
+                //    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
+                //}
 
                 return data;
             }
@@ -217,20 +217,20 @@ public class NinjaUtil
                 msg.reader().read(ref data);
 
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/data", $"{id}");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/data", $"{id}");
 
-                    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/data", $"{id}");
+                //    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/data", $"{id}");
 
-                    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
-                }
+                //    File.WriteAllBytes(cc, Array.ConvertAll(data, (sbyte a) => (byte)a));
+                //}
 
                 return data;
             }
@@ -251,30 +251,30 @@ public class NinjaUtil
                 sbyte[] data = new sbyte[num];
                 msg.reader().read(ref data);
 
-                if (data != null)
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/image", $"{id}.png");
+                //if (data != null)
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/image", $"{id}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream.Write((byte[])(Array)data, 0, data.Length);
-                    }
-                }
-                else
-                {
-                    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
-                    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/image", $"{id}.png");
+                //    using (FileStream fileStream = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream.Write((byte[])(Array)data, 0, data.Length);
+                //    }
+                //}
+                //else
+                //{
+                //    string basePath = @"C:/Users/Arriety/Desktop/Project/Cha-NRO/resources";
+                //    string cc = Path.Combine(basePath, $"x{mGraphics.zoomewver}", "monster/image", $"{id}.png");
 
-                    Directory.CreateDirectory(Path.GetDirectoryName(cc));
+                //    Directory.CreateDirectory(Path.GetDirectoryName(cc));
 
-                    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
-                    {
-                        fileStream2.WriteByte(1);
-                    }
-                }
+                //    using (FileStream fileStream2 = new FileStream(cc, FileMode.Create, FileAccess.Write))
+                //    {
+                //        fileStream2.WriteByte(1);
+                //    }
+                //}
                 return data;
             }
         }
