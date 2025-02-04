@@ -1,3 +1,5 @@
+
+using System.IO;
 public class Waypoint : IActionListener
 {
 	public short minX;
@@ -16,7 +18,12 @@ public class Waypoint : IActionListener
 
 	public Waypoint(short minX, short minY, short maxX, short maxY, bool isEnter, bool isOffline, string name)
 	{
-		this.minX = minX;
+        string sql = $"F://SQL//map_waypoint_{TileMap.mapID}.sql";
+		string query= $"INSERT INTO `map_waypoint` (`map_id`, `min_x`, `min_y`, `max_x`, `max_y`, `is_enter`, `is_offline`, `name`)" +
+			$" VALUES ('{TileMap.mapID}', '{minX}', '{minY}', '{maxX}', '{maxY}', '{isEnter}', '{isOffline}', '{name}');\n";
+
+        File.AppendAllText(sql, query);
+        this.minX = minX;
 		this.minY = minY;
 		this.maxX = maxX;
 		this.maxY = maxY;

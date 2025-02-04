@@ -1305,93 +1305,100 @@ public class Char : IMapObject
 
     public static void taskAction(bool isNextStep)
     {
-        Task task = myCharz().taskMaint;
-        if (task.index > task.contentInfo.Length - 1)
+        try
         {
-            task.index = task.contentInfo.Length - 1;
-        }
-        string text = task.contentInfo[task.index];
-        if (text != null && !text.Equals(string.Empty))
-        {
-            if (text.StartsWith("#"))
+            Task task = myCharz().taskMaint;
+            if (task.index > task.contentInfo.Length - 1)
             {
-                text = NinjaUtil.replace(text, "#", string.Empty);
-                Npc npc = new Npc(5, 0, -100, -100, 5, GameScr.info1.charId[myCharz().cgender][2]);
-                npc.cx = (npc.cy = -100);
-                npc.avatar = GameScr.info1.charId[myCharz().cgender][2];
-                npc.charID = 5;
-                if (GameCanvas.currentScreen == GameScr.instance)
+                task.index = task.contentInfo.Length - 1;
+            }
+            string text = task.contentInfo[task.index];
+            if (text != null && !text.Equals(string.Empty))
+            {
+                if (text.StartsWith("#"))
                 {
-                    ChatPopup.addNextPopUpMultiLine(text, npc);
+                    text = NinjaUtil.replace(text, "#", string.Empty);
+                    Npc npc = new Npc(5, 0, -100, -100, 5, GameScr.info1.charId[myCharz().cgender][2]);
+                    npc.cx = (npc.cy = -100);
+                    npc.avatar = GameScr.info1.charId[myCharz().cgender][2];
+                    npc.charID = 5;
+                    if (GameCanvas.currentScreen == GameScr.instance)
+                    {
+                        ChatPopup.addNextPopUpMultiLine(text, npc);
+                    }
+                }
+                else if (isNextStep)
+                {
+                    GameScr.info1.addInfo(text, 0);
                 }
             }
-            else if (isNextStep)
+            GameScr.isHaveSelectSkill = true;
+            Cout.println("TASKx " + myCharz().taskMaint.taskId);
+            if (myCharz().taskMaint.taskId <= 2)
             {
-                GameScr.info1.addInfo(text, 0);
+                myCharz().canFly = false;
             }
-        }
-        GameScr.isHaveSelectSkill = true;
-        Cout.println("TASKx " + myCharz().taskMaint.taskId);
-        if (myCharz().taskMaint.taskId <= 2)
-        {
-            myCharz().canFly = false;
-        }
-        else
-        {
-            myCharz().canFly = true;
-        }
-        GameScr.gI().left = null;
-        if (task.taskId == 0)
-        {
-            Hint.isViewMap = false;
-            Hint.isViewPotential = false;
-            GameScr.gI().right = null;
-            GameScr.isHaveSelectSkill = false;
+            else
+            {
+                myCharz().canFly = true;
+            }
             GameScr.gI().left = null;
-            if (task.index < 4)
+            if (task.taskId == 0)
             {
-                MagicTree.isPaint = false;
-                GameScr.isPaintRada = -1;
+                Hint.isViewMap = false;
+                Hint.isViewPotential = false;
+                GameScr.gI().right = null;
+                GameScr.isHaveSelectSkill = false;
+                GameScr.gI().left = null;
+                if (task.index < 4)
+                {
+                    MagicTree.isPaint = false;
+                    GameScr.isPaintRada = -1;
+                }
+                if (task.index == 4)
+                {
+                    GameScr.isPaintRada = 1;
+                    MagicTree.isPaint = true;
+                }
+                if (task.index >= 5)
+                {
+                    GameScr.gI().right = GameScr.gI().cmdFocus;
+                }
             }
-            if (task.index == 4)
+            if (task.taskId == 1)
             {
-                GameScr.isPaintRada = 1;
-                MagicTree.isPaint = true;
+                GameScr.isHaveSelectSkill = true;
             }
-            if (task.index >= 5)
+            if (task.taskId >= 1)
             {
                 GameScr.gI().right = GameScr.gI().cmdFocus;
+                GameScr.gI().left = GameScr.gI().cmdMenu;
+            }
+            if (task.taskId >= 0)
+            {
+                Panel.isPaintMap = true;
+            }
+            else
+            {
+                Panel.isPaintMap = false;
+            }
+            if (task.taskId < 12)
+            {
+                GameCanvas.panel.mainTabName = mResources.mainTab1;
+            }
+            else
+            {
+                GameCanvas.panel.mainTabName = mResources.mainTab2;
+            }
+            GameCanvas.panel.tabName[0] = GameCanvas.panel.mainTabName;
+            if (myChar.taskMaint.taskId > 10)
+            {
+                Rms.saveRMSString("fake", "aa");
             }
         }
-        if (task.taskId == 1)
+        catch(Exception e)
         {
-            GameScr.isHaveSelectSkill = true;
-        }
-        if (task.taskId >= 1)
-        {
-            GameScr.gI().right = GameScr.gI().cmdFocus;
-            GameScr.gI().left = GameScr.gI().cmdMenu;
-        }
-        if (task.taskId >= 0)
-        {
-            Panel.isPaintMap = true;
-        }
-        else
-        {
-            Panel.isPaintMap = false;
-        }
-        if (task.taskId < 12)
-        {
-            GameCanvas.panel.mainTabName = mResources.mainTab1;
-        }
-        else
-        {
-            GameCanvas.panel.mainTabName = mResources.mainTab2;
-        }
-        GameCanvas.panel.tabName[0] = GameCanvas.panel.mainTabName;
-        if (myChar.taskMaint.taskId > 10)
-        {
-            Rms.saveRMSString("fake", "aa");
+            Debug.LogError(e.ToString());
         }
     }
 

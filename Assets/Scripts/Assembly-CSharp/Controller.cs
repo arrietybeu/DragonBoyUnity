@@ -136,7 +136,7 @@ public class Controller : IMessageHandler
             int num = 0;
             GameCanvas.timeLoading = 15;
 
-            string filePath = "E:\\log.txt";
+            string filePath = "F:\\log.txt";
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
                 var cmdNames = CmdReflection.GetCommandNames(msg.command);
@@ -1792,7 +1792,7 @@ public class Controller : IMessageHandler
 
                         InfoDlg.hide();
                     }
-                    catch (Exception ex)  
+                    catch (Exception ex)
                     {
                         Debug.LogError("Loi doc tin nhan: " + ex.StackTrace);
                     }
@@ -1826,7 +1826,9 @@ public class Controller : IMessageHandler
                     break;
                 case -107:
                     {
+                        //Debug.LogError("MSGID_GET_PET");
                         sbyte b26 = msg.reader().readByte();
+                        //Debug.LogError("cAction= " + b26);
                         if (b26 == 0)
                         {
                             Char.myCharz().havePet = false;
@@ -1843,7 +1845,7 @@ public class Controller : IMessageHandler
                         Char.myPetz().head = msg.reader().readShort();
                         Char.myPetz().setDefaultPart();
                         int num53 = msg.reader().readUnsignedByte();
-                        Res.outz("num body = " + num53);
+                        Debug.LogError("send Pet num body = " + num53);
                         Char.myPetz().arrItemBody = new Item[num53];
                         for (int num54 = 0; num54 < num53; num54++)
                         {
@@ -1891,6 +1893,7 @@ public class Controller : IMessageHandler
                         Char.myPetz().cMPFull = msg.reader().readLong();
                         Char.myPetz().cDamFull = msg.reader().readLong();
                         Char.myPetz().cName = msg.reader().readUTF();
+                        Debug.LogError("Pet name: " + Char.myPetz().cName);
                         Char.myPetz().currStrLevel = msg.reader().readUTF();
                         Char.myPetz().cPower = msg.reader().readLong();
                         Char.myPetz().cTiemNang = msg.reader().readLong();
@@ -3203,11 +3206,12 @@ public class Controller : IMessageHandler
                         short num145 = -1;
                         for (int num146 = 0; num146 < array12.Length; num146++)
                         {
-                            string str5 = msg.reader().readUTF();
+                            //str5: Đi theo Ôsin GameScr.tasks[num146]: 44 GameScr.mapTasks[num146]: -1 str6: Đi theo Ôsin
+                            string str5 = msg.reader().readUTF();// Đi theo Ôsin
                             str5 = Res.changeString(str5);
-                            GameScr.tasks[num146] = msg.reader().readByte();
-                            GameScr.mapTasks[num146] = msg.reader().readShort();
-                            string str6 = msg.reader().readUTF();
+                            GameScr.tasks[num146] = msg.reader().readByte();// 44
+                            GameScr.mapTasks[num146] = msg.reader().readShort();// -1
+                            string str6 = msg.reader().readUTF();// Đi theo Ôsin
                             str6 = Res.changeString(str6);
                             array14[num146] = -1;
                             array12[num146] = str5;
@@ -3215,6 +3219,11 @@ public class Controller : IMessageHandler
                             {
                                 array13[num146] = str6;
                             }
+                            //Debug.LogError("str5: "
+                            //    + str5 + " GameScr.tasks[num146]: "
+                            //    + GameScr.tasks[num146] + " GameScr.mapTasks[num146]: "
+                            //    + GameScr.mapTasks[num146] + " str6: "
+                            //    + str6);
                         }
                         try
                         {
@@ -3664,6 +3673,7 @@ public class Controller : IMessageHandler
                     GameScr.cmy = GameScr.cmtoY;
                     GameCanvas.isRequestMapID = 2;
                     GameCanvas.waitingTimeChangeMap = mSystem.currentTimeMillis() + 1000;
+
                     break;
                 case -31:
                     {
@@ -4689,7 +4699,10 @@ public class Controller : IMessageHandler
                         GameScr.nClasss[j].skillTemplates[k].skills[l].moreInfo = dis.readUTF();
                         Skills.add(GameScr.nClasss[j].skillTemplates[k].skills[l]);
                         var skilltemplate = $"SKill id:  {GameScr.nClasss[j].skillTemplates[k].skills[l].skillId}\n";
-                        File.AppendAllText(log, skilltemplate);
+                        if (!File.Exists(log))
+                        {
+                            File.AppendAllText(log, skilltemplate);
+                        }
                     }
                 }
                 //Debug.LogWarning("skill count: " + count);
@@ -4988,6 +5001,18 @@ public class Controller : IMessageHandler
     {
         try
         {
+
+            var text6 =
+               $"mapID: {TileMap.mapID} " +
+               $"mapName: {TileMap.mapName} " +
+               $"planetId: {TileMap.planetID} " +
+               $"Tile ID: {TileMap.tileID} " +
+               $"TileMap.bgID: {TileMap.bgID} " +
+               $"TileMap.typeMap: {TileMap.typeMap} " +
+               $"TileMap.zoneID: {TileMap.zoneID}";
+            ItemTime itemTime = new ItemTime();
+            itemTime.initTimeText(13, text6, 190000);
+            GameScr.textTime.addElement(itemTime);
             if (mGraphics.zoomLevel == 1)
             {
                 SmallImage.clearHastable();
@@ -4996,7 +5021,9 @@ public class Controller : IMessageHandler
             Char.myCharz().cy = (Char.myCharz().cySend = (Char.myCharz().cyFocus = msg.reader().readShort()));
             Char.myCharz().xSd = Char.myCharz().cx;
             Char.myCharz().ySd = Char.myCharz().cy;
-            //Debug.LogError("head= " + Char.myCharz().head + " body= " + Char.myCharz().body + " left= " + Char.myCharz().leg + " x= " + Char.myCharz().cx + " y= " + Char.myCharz().cy + " chung toc= " + Char.myCharz().cgender);
+            //Debug.LogError("head= " + Char.myCharz().head + " body= "
+            //+ Char.myCharz().body + " left= " + Char.myCharz().leg + " x= " + Char.myCharz().cx
+            //+ " y= " + Char.myCharz().cy + " chung toc= " + Char.myCharz().cgender);
             if (Char.myCharz().cx >= 0 && Char.myCharz().cx <= 100)
             {
                 Char.myCharz().cdir = 1;
@@ -5026,118 +5053,215 @@ public class Controller : IMessageHandler
             num = msg.reader().readByte();
             Mob.newMob.removeAllElements();
 
-            string sql = "F://SQL//map_monsters.sql";
-            for (sbyte b = 0; b < num; b++)
+            string sql = $"F://SQL//Map//map_monsters_{TileMap.mapID}.sql";
+            if (!File.Exists(sql))
             {
-                var isDisable = msg.reader().readBoolean();
-                var isDontMove = msg.reader().readBoolean();
-                var isFire = msg.reader().readBoolean();
-                var isIce = msg.reader().readBoolean();
-                var isWind = msg.reader().readBoolean();
-                var templateId = msg.reader().readShort();
-                var sys = msg.reader().readByte();
-                var hp = msg.reader().readLong();
-                var level = msg.reader().readByte();
-                var maxp = msg.reader().readLong();
-                var x = msg.reader().readShort();
-                var y = msg.reader().readShort();
-                var status = msg.reader().readByte();
-                var levelBoss = msg.reader().readByte();
-
-                Mob mob = new Mob(
-                    b,// mobId
-                    isDisable, // isDisable
-                    isDontMove, // isDontMove
-                    isFire,// isFire
-                    isIce, // isIce
-                    isWind, // isWind
-                    templateId, // templateId
-                    sys,// sys
-                    hp, // hp
-                    level, // level
-                    maxp, //maxp
-                    x, // pointy
-                    y, //pointy
-                    status, // status
-                    levelBoss);// levelBoss
-                mob.xSd = mob.x;
-                mob.ySd = mob.y;
-                mob.isBoss = msg.reader().readBoolean();// is boss 
-
-                string query = $"INSERT INTO map_monsters (map_id, mob_id, sys, hp, level, maxp, x, y, status, level_boss, is_boss," +
-                    $" is_disable, is_dont_move, is_fire, is_ice, is_wind) VALUES (" +
-                      $"{TileMap.mapID}," +
-                      $" {templateId}" +
-                      $" {sys}," +
-                      $" {hp}," +
-                      $" {level}," +
-                      $" {maxp}," +
-                      $" {x}," +
-                      $" {y}," +
-                      $" {status}," +
-                      $" {levelBoss}," +
-                      $" {(mob.isBoss ? 1 : 0)}," +
-                      $" {(isDisable ? 1 : 0)}," +
-                      $" {(isDontMove ? 1 : 0)}," +
-                      $" {(isFire ? 1 : 0)}, " +
-                      $" {(isIce ? 1 : 0)}," +
-                      $" {(isWind ? 1 : 0)});\n";
-                //File.AppendAllText(sql, query);
-
-                if (Mob.arrMobTemplate[mob.templateId].type != 0)
+                for (sbyte b = 0; b < num; b++)
                 {
-                    if (b % 3 == 0)
+                    var isDisable = msg.reader().readBoolean();
+                    var isDontMove = msg.reader().readBoolean();
+                    var isFire = msg.reader().readBoolean();
+                    var isIce = msg.reader().readBoolean();
+                    var isWind = msg.reader().readBoolean();
+                    var templateId = msg.reader().readShort();
+                    var sys = msg.reader().readByte();
+                    var hp = msg.reader().readLong();
+                    var level = msg.reader().readByte();
+                    var maxp = msg.reader().readLong();
+                    var x = msg.reader().readShort();
+                    var y = msg.reader().readShort();
+                    var status = msg.reader().readByte();
+                    var levelBoss = msg.reader().readByte();
+
+                    Mob mob = new Mob(
+                        b,// mobId
+                        isDisable, // isDisable
+                        isDontMove, // isDontMove
+                        isFire,// isFire
+                        isIce, // isIce
+                        isWind, // isWind
+                        templateId, // templateId
+                        sys,// sys
+                        hp, // hp
+                        level, // level
+                        maxp, //maxp
+                        x, // pointy
+                        y, //pointy
+                        status, // status
+                        levelBoss);// levelBoss
+                    mob.xSd = mob.x;
+                    mob.ySd = mob.y;
+                    mob.isBoss = msg.reader().readBoolean();// is boss 
+
+                    string query = $"INSERT INTO map_monsters (map_id, mob_id, sys, hp, level, maxp, x, y, status, level_boss, is_boss," +
+                        $" is_disable, is_dont_move, is_fire, is_ice, is_wind) VALUES (" +
+                          $"{TileMap.mapID}," +
+                          $" {templateId}," +
+                          $" {sys}," +
+                          $" {hp}," +
+                          $" {level}," +
+                          $" {maxp}," +
+                          $" {x}," +
+                          $" {y}," +
+                          $" {status}," +
+                          $" {levelBoss}," +
+                          $" {(mob.isBoss ? 1 : 0)}," +
+                          $" {(isDisable ? 1 : 0)}," +
+                          $" {(isDontMove ? 1 : 0)}," +
+                          $" {(isFire ? 1 : 0)}," +
+                          $" {(isIce ? 1 : 0)}," +
+                          $" {(isWind ? 1 : 0)});\n";
+                    File.AppendAllText(sql, query);
+
+                    if (Mob.arrMobTemplate[mob.templateId].type != 0)
                     {
-                        mob.dir = -1;
+                        if (b % 3 == 0)
+                        {
+                            mob.dir = -1;
+                        }
+                        else
+                        {
+                            mob.dir = 1;
+                        }
+                        mob.x += 10 - b % 20;
+                    }
+                    mob.isMobMe = false;
+                    BigBoss bigBoss = null;
+                    BachTuoc bachTuoc = null;
+                    BigBoss2 bigBoss2 = null;
+                    NewBoss newBoss = null;
+                    if (mob.templateId == 70)
+                    {
+                        bigBoss = new BigBoss(b, (short)mob.x, (short)mob.y, 70, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (mob.templateId == 71)
+                    {
+                        bachTuoc = new BachTuoc(b, (short)mob.x, (short)mob.y, 71, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (mob.templateId == 72)
+                    {
+                        bigBoss2 = new BigBoss2(b, (short)mob.x, (short)mob.y, 72, mob.hp, mob.maxHp, 3);
+                    }
+                    if (mob.isBoss)
+                    {
+                        newBoss = new NewBoss(b, (short)mob.x, (short)mob.y, mob.templateId, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (newBoss != null)
+                    {
+                        GameScr.vMob.addElement(newBoss);
+                    }
+                    else if (bigBoss != null)
+                    {
+                        GameScr.vMob.addElement(bigBoss);
+                    }
+                    else if (bachTuoc != null)
+                    {
+                        GameScr.vMob.addElement(bachTuoc);
+                    }
+                    else if (bigBoss2 != null)
+                    {
+                        GameScr.vMob.addElement(bigBoss2);
                     }
                     else
                     {
-                        mob.dir = 1;
+                        GameScr.vMob.addElement(mob);
                     }
-                    mob.x += 10 - b % 20;
-                }
-                mob.isMobMe = false;
-                BigBoss bigBoss = null;
-                BachTuoc bachTuoc = null;
-                BigBoss2 bigBoss2 = null;
-                NewBoss newBoss = null;
-                if (mob.templateId == 70)
-                {
-                    bigBoss = new BigBoss(b, (short)mob.x, (short)mob.y, 70, mob.hp, mob.maxHp, mob.sys);
-                }
-                if (mob.templateId == 71)
-                {
-                    bachTuoc = new BachTuoc(b, (short)mob.x, (short)mob.y, 71, mob.hp, mob.maxHp, mob.sys);
-                }
-                if (mob.templateId == 72)
-                {
-                    bigBoss2 = new BigBoss2(b, (short)mob.x, (short)mob.y, 72, mob.hp, mob.maxHp, 3);
-                }
-                if (mob.isBoss)
-                {
-                    newBoss = new NewBoss(b, (short)mob.x, (short)mob.y, mob.templateId, mob.hp, mob.maxHp, mob.sys);
-                }
-                if (newBoss != null)
-                {
-                    GameScr.vMob.addElement(newBoss);
-                }
-                else if (bigBoss != null)
-                {
-                    GameScr.vMob.addElement(bigBoss);
-                }
-                else if (bachTuoc != null)
-                {
-                    GameScr.vMob.addElement(bachTuoc);
-                }
-                else if (bigBoss2 != null)
-                {
-                    GameScr.vMob.addElement(bigBoss2);
-                }
-                else
-                {
-                    GameScr.vMob.addElement(mob);
                 }
             }
+            else
+            {
+                for (sbyte b = 0; b < num; b++)
+                {
+                    var isDisable = msg.reader().readBoolean();
+                    var isDontMove = msg.reader().readBoolean();
+                    var isFire = msg.reader().readBoolean();
+                    var isIce = msg.reader().readBoolean();
+                    var isWind = msg.reader().readBoolean();
+                    var templateId = msg.reader().readShort();
+                    var sys = msg.reader().readByte();
+                    var hp = msg.reader().readLong();
+                    var level = msg.reader().readByte();
+                    var maxp = msg.reader().readLong();
+                    var x = msg.reader().readShort();
+                    var y = msg.reader().readShort();
+                    var status = msg.reader().readByte();
+                    var levelBoss = msg.reader().readByte();
+
+                    Mob mob = new Mob(
+                        b,// mobId
+                        isDisable, // isDisable
+                        isDontMove, // isDontMove
+                        isFire,// isFire
+                        isIce, // isIce
+                        isWind, // isWind
+                        templateId, // templateId
+                        sys,// sys
+                        hp, // hp
+                        level, // level
+                        maxp, //maxp
+                        x, // pointy
+                        y, //pointy
+                        status, // status
+                        levelBoss);// levelBoss
+                    mob.xSd = mob.x;
+                    mob.ySd = mob.y;
+                    mob.isBoss = msg.reader().readBoolean();// is boss 
+                    if (Mob.arrMobTemplate[mob.templateId].type != 0)
+                    {
+                        if (b % 3 == 0)
+                        {
+                            mob.dir = -1;
+                        }
+                        else
+                        {
+                            mob.dir = 1;
+                        }
+                        mob.x += 10 - b % 20;
+                    }
+                    mob.isMobMe = false;
+                    BigBoss bigBoss = null;
+                    BachTuoc bachTuoc = null;
+                    BigBoss2 bigBoss2 = null;
+                    NewBoss newBoss = null;
+                    if (mob.templateId == 70)
+                    {
+                        bigBoss = new BigBoss(b, (short)mob.x, (short)mob.y, 70, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (mob.templateId == 71)
+                    {
+                        bachTuoc = new BachTuoc(b, (short)mob.x, (short)mob.y, 71, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (mob.templateId == 72)
+                    {
+                        bigBoss2 = new BigBoss2(b, (short)mob.x, (short)mob.y, 72, mob.hp, mob.maxHp, 3);
+                    }
+                    if (mob.isBoss)
+                    {
+                        newBoss = new NewBoss(b, (short)mob.x, (short)mob.y, mob.templateId, mob.hp, mob.maxHp, mob.sys);
+                    }
+                    if (newBoss != null)
+                    {
+                        GameScr.vMob.addElement(newBoss);
+                    }
+                    else if (bigBoss != null)
+                    {
+                        GameScr.vMob.addElement(bigBoss);
+                    }
+                    else if (bachTuoc != null)
+                    {
+                        GameScr.vMob.addElement(bachTuoc);
+                    }
+                    else if (bigBoss2 != null)
+                    {
+                        GameScr.vMob.addElement(bigBoss2);
+                    }
+                    else
+                    {
+                        GameScr.vMob.addElement(mob);
+                    }
+                }
+            }
+
             if (Char.myCharz().mobMe != null && GameScr.findMobInMap(Char.myCharz().mobMe.mobId) == null)
             {
                 Char.myCharz().mobMe.getData();
@@ -5151,30 +5275,63 @@ public class Controller : IMessageHandler
             }
             GameCanvas.debug("SA75x6", 2);
             num = msg.reader().readByte();
+            var filePa = $"F://SQL//Map//map_npc_{TileMap.mapID}.sql";
             //Debug.LogError("NPC size= " + num);
-            for (int j = 0; j < num; j++)
+            if (!File.Exists(filePa))
             {
-                sbyte b3 = msg.reader().readByte();
-                short cx = msg.reader().readShort();
-                short num2 = msg.reader().readShort();
-                sbyte b4 = msg.reader().readByte();
-                short num3 = msg.reader().readShort();
-                if (b4 != 6 && ((Char.myCharz().taskMaint.taskId >= 7 && (Char.myCharz().taskMaint.taskId != 7 || Char.myCharz().taskMaint.index > 1)) || (b4 != 7 && b4 != 8 && b4 != 9)) && (Char.myCharz().taskMaint.taskId >= 6 || b4 != 16))
+                for (int j = 0; j < num; j++)
                 {
-                    if (b4 == 4)
+                    sbyte b3 = msg.reader().readByte();
+                    short cx = msg.reader().readShort();
+                    short num2 = msg.reader().readShort();
+                    sbyte b4 = msg.reader().readByte();
+                    short num3 = msg.reader().readShort();
+                    if (b4 != 6 && ((Char.myCharz().taskMaint.taskId >= 7 && (Char.myCharz().taskMaint.taskId != 7 || Char.myCharz().taskMaint.index > 1)) || (b4 != 7 && b4 != 8 && b4 != 9)) && (Char.myCharz().taskMaint.taskId >= 6 || b4 != 16))
                     {
-                        GameScr.gI().magicTree = new MagicTree(j, b3, cx, num2, b4, num3);
-                        Service.gI().magicTree(2);
-                        GameScr.vNpc.addElement(GameScr.gI().magicTree);
-                    }
-                    else
-                    {
-                        Npc o = new Npc(j, b3, cx, num2 + 3, b4, num3);
-                        GameScr.vNpc.addElement(o);
+                        if (b4 == 4)
+                        {
+                            GameScr.gI().magicTree = new MagicTree(j, b3, cx, num2, b4, num3);
+                            Service.gI().magicTree(2);
+                            GameScr.vNpc.addElement(GameScr.gI().magicTree);
+                        }
+                        else
+                        {
+                            Npc o = new Npc(j, b3, cx, num2 + 3, b4, num3);
+                            //int npcId, int status, int cx, int cy, int templateId, int avatar
+                            string query = $"INSERT INTO map_npc (map_id, npc_id, status, x, y, avatar) VALUES ({TileMap.mapID}, {b4}, {b3}, {cx}, {num2 + 3}, {num3});\n";
+                            File.AppendAllText(filePa, query);
+                            GameScr.vNpc.addElement(o);
+                        }
                     }
                 }
             }
-            GameCanvas.debug("SA75x7", 2);
+            else
+            {
+                for (int j = 0; j < num; j++)
+                {
+                    sbyte b3 = msg.reader().readByte();
+                    short cx = msg.reader().readShort();
+                    short num2 = msg.reader().readShort();
+                    sbyte b4 = msg.reader().readByte();
+                    short num3 = msg.reader().readShort();
+                    if (b4 != 6 && ((Char.myCharz().taskMaint.taskId >= 7 && (Char.myCharz().taskMaint.taskId != 7 || Char.myCharz().taskMaint.index > 1)) || (b4 != 7 && b4 != 8 && b4 != 9)) && (Char.myCharz().taskMaint.taskId >= 6 || b4 != 16))
+                    {
+                        if (b4 == 4)
+                        {
+                            GameScr.gI().magicTree = new MagicTree(j, b3, cx, num2, b4, num3);
+                            Service.gI().magicTree(2);
+                            GameScr.vNpc.addElement(GameScr.gI().magicTree);
+                        }
+                        else
+                        {
+                            Npc o = new Npc(j, b3, cx, num2 + 3, b4, num3);
+                            GameScr.vNpc.addElement(o);
+                        }
+                    }
+                }
+            }
+
+                GameCanvas.debug("SA75x7", 2);
             num = msg.reader().readByte();
             string empty = string.Empty;
             //Debug.LogError("item size = " + num);
@@ -5217,77 +5374,44 @@ public class Controller : IMessageHandler
             BgItem.vKeysNew.removeAllElements();
             if (!GameCanvas.lowGraphic || (GameCanvas.lowGraphic && TileMap.isVoDaiMap()) || TileMap.mapID == 45 || TileMap.mapID == 46 || TileMap.mapID == 47 || TileMap.mapID == 48 || TileMap.mapID == 120 || TileMap.mapID == 128 || TileMap.mapID == 170 || TileMap.mapID == 49)
             {
-                short num6 = msg.reader().readShort();
-                empty = "item high graphic: ";
-                for (int m = 0; m < num6; m++)
+                string filepath = $"F://SQL//Map//map_item_background_{TileMap.mapID}.sql";
+                if (!File.Exists(filepath))
                 {
-                    short num7 = msg.reader().readShort();
-                    short num8 = msg.reader().readShort();
-                    short num9 = msg.reader().readShort();
-                    if (TileMap.getBIById(num7) != null)
+                    short num6 = msg.reader().readShort();
+                    empty = "item high graphic: ";
+                    for (int m = 0; m < num6; m++)
                     {
-                        BgItem bIById = TileMap.getBIById(num7);
-                        BgItem bgItem = new BgItem();
-                        bgItem.id = num7;
-                        bgItem.idImage = bIById.idImage;
-                        bgItem.dx = bIById.dx;
-                        bgItem.dy = bIById.dy;
-                        bgItem.x = num8 * TileMap.size;
-                        bgItem.y = num9 * TileMap.size;
-                        bgItem.layer = bIById.layer;
-                        if (TileMap.isExistMoreOne(bgItem.id))
+                        short num7 = msg.reader().readShort();
+                        short num8 = msg.reader().readShort();
+                        short num9 = msg.reader().readShort();
+
+                        string query = $"INSERT INTO map_item_background (map_id, id, x, y) VALUES ({TileMap.mapID}, {num7}, {num8}, {num9});\n";
+
+
+                        File.AppendAllText(filepath, query);
+                        if (TileMap.getBIById(num7) != null)
                         {
-                            bgItem.trans = ((m % 2 != 0) ? 2 : 0);
-                            if (TileMap.mapID == 45)
+                            BgItem bIById = TileMap.getBIById(num7);
+                            BgItem bgItem = new BgItem();
+                            bgItem.id = num7;
+                            bgItem.idImage = bIById.idImage;
+                            bgItem.dx = bIById.dx;
+                            bgItem.dy = bIById.dy;
+                            bgItem.x = num8 * TileMap.size;
+                            bgItem.y = num9 * TileMap.size;
+                            bgItem.layer = bIById.layer;
+                            if (TileMap.isExistMoreOne(bgItem.id))
                             {
-                                bgItem.trans = 0;
+                                bgItem.trans = ((m % 2 != 0) ? 2 : 0);
+                                if (TileMap.mapID == 45)
+                                {
+                                    bgItem.trans = 0;
+                                }
                             }
-                        }
-                        Image image = null;
-                        if (!BgItem.imgNew.containsKey(bgItem.idImage + string.Empty))
-                        {
-                            if (mGraphics.zoomLevel == 1)
+                            Image image = null;
+                            if (!BgItem.imgNew.containsKey(bgItem.idImage + string.Empty))
                             {
-                                image = GameCanvas.loadImage("/mapBackGround/" + bgItem.idImage + ".png");
-                                if (image == null)
-                                {
-                                    image = Image.createRGBImage(new int[1], 1, 1, true);
-                                    Service.gI().getBgTemplate(bgItem.idImage);
-                                }
-                                BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
-                            }
-                            else
-                            {
-                                bool flag2 = false;
-                                sbyte[] array = Rms.loadRMS(mGraphics.zoomLevel + "bgItem" + bgItem.idImage);
-                                if (array != null)
-                                {
-                                    if (BgItem.newSmallVersion != null)
-                                    {
-                                        Res.outz("Small  last= " + array.Length % 127 + "new Version= " + BgItem.newSmallVersion[bgItem.idImage]);
-                                        if (array.Length % 127 != BgItem.newSmallVersion[bgItem.idImage])
-                                        {
-                                            flag2 = true;
-                                        }
-                                    }
-                                    if (!flag2)
-                                    {
-                                        image = Image.createImage(array, 0, array.Length);
-                                        if (image != null)
-                                        {
-                                            BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
-                                        }
-                                        else
-                                        {
-                                            flag2 = true;
-                                        }
-                                    }
-                                }
-                                else
-                                {
-                                    flag2 = true;
-                                }
-                                if (flag2)
+                                if (mGraphics.zoomLevel == 1)
                                 {
                                     image = GameCanvas.loadImage("/mapBackGround/" + bgItem.idImage + ".png");
                                     if (image == null)
@@ -5297,18 +5421,161 @@ public class Controller : IMessageHandler
                                     }
                                     BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
                                 }
+                                else
+                                {
+                                    bool flag2 = false;
+                                    sbyte[] array = Rms.loadRMS(mGraphics.zoomLevel + "bgItem" + bgItem.idImage);
+                                    if (array != null)
+                                    {
+                                        if (BgItem.newSmallVersion != null)
+                                        {
+                                            Res.outz("Small  last= " + array.Length % 127 + "new Version= " + BgItem.newSmallVersion[bgItem.idImage]);
+                                            if (array.Length % 127 != BgItem.newSmallVersion[bgItem.idImage])
+                                            {
+                                                flag2 = true;
+                                            }
+                                        }
+                                        if (!flag2)
+                                        {
+                                            image = Image.createImage(array, 0, array.Length);
+                                            if (image != null)
+                                            {
+                                                BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
+                                            }
+                                            else
+                                            {
+                                                flag2 = true;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        flag2 = true;
+                                    }
+                                    if (flag2)
+                                    {
+                                        image = GameCanvas.loadImage("/mapBackGround/" + bgItem.idImage + ".png");
+                                        if (image == null)
+                                        {
+                                            image = Image.createRGBImage(new int[1], 1, 1, true);
+                                            Service.gI().getBgTemplate(bgItem.idImage);
+                                        }
+                                        BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
+                                    }
+                                }
+                                BgItem.vKeysLast.addElement(bgItem.idImage + string.Empty);
                             }
-                            BgItem.vKeysLast.addElement(bgItem.idImage + string.Empty);
+                            if (!BgItem.isExistKeyNews(bgItem.idImage + string.Empty))
+                            {
+                                BgItem.vKeysNew.addElement(bgItem.idImage + string.Empty);
+                            }
+                            bgItem.changeColor();
+                            TileMap.vCurrItem.addElement(bgItem);
                         }
-                        if (!BgItem.isExistKeyNews(bgItem.idImage + string.Empty))
-                        {
-                            BgItem.vKeysNew.addElement(bgItem.idImage + string.Empty);
-                        }
-                        bgItem.changeColor();
-                        TileMap.vCurrItem.addElement(bgItem);
+                        empty = empty + num7 + ",";
                     }
-                    empty = empty + num7 + ",";
                 }
+                else
+                {
+                    short num6 = msg.reader().readShort();
+                    empty = "item high graphic: ";
+                    for (int m = 0; m < num6; m++)
+                    {
+                        short num7 = msg.reader().readShort();
+                        short num8 = msg.reader().readShort();
+                        short num9 = msg.reader().readShort();
+
+                        string query = $"INSERT INTO map_item_background (map_id, id, x, y) VALUES ({TileMap.mapID}, {num7}, {num8}, {num9});\n";
+
+
+                        //File.AppendAllText(filepath, query);
+                        if (TileMap.getBIById(num7) != null)
+                        {
+                            BgItem bIById = TileMap.getBIById(num7);
+                            BgItem bgItem = new BgItem();
+                            bgItem.id = num7;
+                            bgItem.idImage = bIById.idImage;
+                            bgItem.dx = bIById.dx;
+                            bgItem.dy = bIById.dy;
+                            bgItem.x = num8 * TileMap.size;
+                            bgItem.y = num9 * TileMap.size;
+                            bgItem.layer = bIById.layer;
+                            if (TileMap.isExistMoreOne(bgItem.id))
+                            {
+                                bgItem.trans = ((m % 2 != 0) ? 2 : 0);
+                                if (TileMap.mapID == 45)
+                                {
+                                    bgItem.trans = 0;
+                                }
+                            }
+                            Image image = null;
+                            if (!BgItem.imgNew.containsKey(bgItem.idImage + string.Empty))
+                            {
+                                if (mGraphics.zoomLevel == 1)
+                                {
+                                    image = GameCanvas.loadImage("/mapBackGround/" + bgItem.idImage + ".png");
+                                    if (image == null)
+                                    {
+                                        image = Image.createRGBImage(new int[1], 1, 1, true);
+                                        Service.gI().getBgTemplate(bgItem.idImage);
+                                    }
+                                    BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
+                                }
+                                else
+                                {
+                                    bool flag2 = false;
+                                    sbyte[] array = Rms.loadRMS(mGraphics.zoomLevel + "bgItem" + bgItem.idImage);
+                                    if (array != null)
+                                    {
+                                        if (BgItem.newSmallVersion != null)
+                                        {
+                                            Res.outz("Small  last= " + array.Length % 127 + "new Version= " + BgItem.newSmallVersion[bgItem.idImage]);
+                                            if (array.Length % 127 != BgItem.newSmallVersion[bgItem.idImage])
+                                            {
+                                                flag2 = true;
+                                            }
+                                        }
+                                        if (!flag2)
+                                        {
+                                            image = Image.createImage(array, 0, array.Length);
+                                            if (image != null)
+                                            {
+                                                BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
+                                            }
+                                            else
+                                            {
+                                                flag2 = true;
+                                            }
+                                        }
+                                    }
+                                    else
+                                    {
+                                        flag2 = true;
+                                    }
+                                    if (flag2)
+                                    {
+                                        image = GameCanvas.loadImage("/mapBackGround/" + bgItem.idImage + ".png");
+                                        if (image == null)
+                                        {
+                                            image = Image.createRGBImage(new int[1], 1, 1, true);
+                                            Service.gI().getBgTemplate(bgItem.idImage);
+                                        }
+                                        BgItem.imgNew.put(bgItem.idImage + string.Empty, image);
+                                    }
+                                }
+                                BgItem.vKeysLast.addElement(bgItem.idImage + string.Empty);
+                            }
+                            if (!BgItem.isExistKeyNews(bgItem.idImage + string.Empty))
+                            {
+                                BgItem.vKeysNew.addElement(bgItem.idImage + string.Empty);
+                            }
+                            bgItem.changeColor();
+                            TileMap.vCurrItem.addElement(bgItem);
+                        }
+                        empty = empty + num7 + ",";
+                    }
+                }
+
                 //Debug.LogError("item High Graphics: " + empty);
                 for (int n = 0; n < BgItem.vKeysLast.size(); n++)
                 {
@@ -5372,6 +5639,7 @@ public class Controller : IMessageHandler
         GameCanvas.isLoading = false;
         Res.err(">>>>>>>>>>>>>>>>>>>>>>>>>>>>>>> Loadmap thanh cong");
     }
+
     // eff là item effmap (kiểu như là cây thông con tó eff), beff là eff backgroud (mưa , tuyết rơi, tùm lum rơi)
     public void keyValueAction(string key, string value)
     {
@@ -5594,7 +5862,10 @@ public class Controller : IMessageHandler
                         {
                             GameScr.exps[j] = msg.reader().readLong();
                             var query = $"INSERT INTO caption (id, exp) VALUES ({j}, {GameScr.exps[j]});\n";
-                            File.AppendAllText(querry, query);
+                            if (!File.Exists(filePath))
+                            {
+                                File.AppendAllText(querry, query);
+                            }
                         }
                         break;
                     }
@@ -5645,7 +5916,7 @@ public class Controller : IMessageHandler
                         TileMap.tmw = msg.reader().readByte();
                         TileMap.tmh = msg.reader().readByte();
                         TileMap.maps = new int[TileMap.tmw * TileMap.tmh];
-                        Debug.LogError("   M apsize= " + TileMap.tmw * TileMap.tmh);
+                        Debug.LogError($" MapName: {TileMap.mapName}  M apsize= " + TileMap.tmw * TileMap.tmh);
                         for (int i = 0; i < TileMap.maps.Length; i++)
                         {
                             int num = msg.reader().readByte();
@@ -5712,7 +5983,7 @@ public class Controller : IMessageHandler
                 string linkDefault = msg.reader().readUTF();
                 Res.outz(">>Get CLIENT_INFO");
                 ServerListScreen.linkDefault = linkDefault;
-                Debug.LogError(linkDefault);
+                //Debug.LogError(linkDefault);
                 mSystem.AddIpTest();
                 ServerListScreen.getServerList(ServerListScreen.linkDefault);
                 try
@@ -5745,7 +6016,7 @@ public class Controller : IMessageHandler
             GameCanvas.debug("SA12", 2);
             sbyte b = msg.reader().readByte();
             Res.outz("---messageSubCommand : " + b);
-            string filePath = "E:\\log.txt";
+            string filePath = "F:\\log.txt";
             using (StreamWriter writer = new StreamWriter(filePath, true))
             {
                 var cmdNames = CmdReflection.GetCommandNames(msg.command);
@@ -5834,44 +6105,44 @@ public class Controller : IMessageHandler
                         Char.vItemTime.removeAllElements();
                         GameScr.loadImg();
                         GameScr.currentCharViewInfo = Char.myCharz();
-                        Char.myCharz().charID = msg.reader().readInt();
-                        Char.myCharz().ctaskId = msg.reader().readByte();
-                        Char.myCharz().cgender = msg.reader().readByte();
-                        Char.myCharz().head = msg.reader().readShort();
-                        Char.myCharz().cName = msg.reader().readUTF();
+                        Char.myCharz().charID = msg.reader().readInt();// out.writeInt(player.getId());
+                        Char.myCharz().ctaskId = msg.reader().readByte();// out.writeByte(player.getPlayerTask().getTaskMain().getId());
+                        Char.myCharz().cgender = msg.reader().readByte();// out.writeByte(player.getGender());
+                        Char.myCharz().head = msg.reader().readShort();// out.writeShort(player.getPlayerFashion().getHead());
+                        Char.myCharz().cName = msg.reader().readUTF();// out.writeUTF(player.getName());
                         Char.myCharz().cPk = msg.reader().readByte();
-                        Char.myCharz().cTypePk = msg.reader().readByte();
-                        Char.myCharz().cPower = msg.reader().readLong();
+                        Char.myCharz().cTypePk = msg.reader().readByte();// out.writeByte(player.getTypePk());
+                        Char.myCharz().cPower = msg.reader().readLong();// out.writeLong(player.getStats().getPower());
                         Char.myCharz().applyCharLevelPercent();
                         Char.myCharz().eff5BuffHp = msg.reader().readShort();
                         Char.myCharz().eff5BuffMp = msg.reader().readShort();
-                        Char.myCharz().nClass = GameScr.nClasss[msg.reader().readByte()];
+                        Char.myCharz().nClass = GameScr.nClasss[msg.reader().readByte()];// out.writeByte(player.getGender());
                         Char.myCharz().vSkill.removeAllElements();
                         Char.myCharz().vSkillFight.removeAllElements();
                         GameScr.gI().dHP = Char.myCharz().cHP;
                         GameScr.gI().dMP = Char.myCharz().cMP;
-                        sbyte b2 = msg.reader().readByte();
+                        sbyte b2 = msg.reader().readByte();// List<SkillInfo> skills = player.getPlayerSkill().getSkills(); || out.writeByte(skills.size());
                         for (sbyte b6 = 0; b6 < b2; b6++)
                         {
-                            Skill skill3 = Skills.get(msg.reader().readShort());
+                            Skill skill3 = Skills.get(msg.reader().readShort());// out.writeShort(skill.getSkillId());
                             useSkill(skill3);
                         }
                         GameScr.gI().sortSkill();
                         GameScr.gI().loadSkillShortcut();
-                        Char.myCharz().xu = msg.reader().readLong();
-                        Char.myCharz().luongKhoa = msg.reader().readInt();
-                        Char.myCharz().luong = msg.reader().readInt();
+                        Char.myCharz().xu = msg.reader().readLong();// out.writeLong(player.getPlayerCurrencies().getGold());
+                        Char.myCharz().luongKhoa = msg.reader().readInt();// out.writeInt(player.getPlayerCurrencies().getRuby());
+                        Char.myCharz().luong = msg.reader().readInt();// out.writeInt(player.getPlayerCurrencies().getGem());
                         Char.myCharz().xuStr = Res.formatNumber(Char.myCharz().xu);
                         Char.myCharz().luongStr = mSystem.numberTostring(Char.myCharz().luong);
                         Char.myCharz().luongKhoaStr = mSystem.numberTostring(Char.myCharz().luongKhoa);
-                        Char.myCharz().arrItemBody = new Item[msg.reader().readByte()];
+                        Char.myCharz().arrItemBody = new Item[msg.reader().readByte()];// message.writer().writeByte(items.size());
                         try
                         {
                             Char.myCharz().setDefaultPart();
                             for (int k = 0; k < Char.myCharz().arrItemBody.Length; k++)
                             {
-                                short num6 = msg.reader().readShort();
-                                if (num6 == -1)
+                                short num6 = msg.reader().readShort();// message.writer().writeShort(item.getTemplate().id());
+                                if (num6 == -1)// if (item == null) {
                                 {
                                     continue;
                                 }
@@ -5879,10 +6150,10 @@ public class Controller : IMessageHandler
                                 int num7 = itemTemplate.type;
                                 Char.myCharz().arrItemBody[k] = new Item();
                                 Char.myCharz().arrItemBody[k].template = itemTemplate;
-                                Char.myCharz().arrItemBody[k].quantity = msg.reader().readInt();
-                                Char.myCharz().arrItemBody[k].info = msg.reader().readUTF();
-                                Char.myCharz().arrItemBody[k].content = msg.reader().readUTF();
-                                int num8 = msg.reader().readUnsignedByte();
+                                Char.myCharz().arrItemBody[k].quantity = msg.reader().readInt();// message.writer().writeInt(item.getQuantity());
+                                Char.myCharz().arrItemBody[k].info = msg.reader().readUTF();// message.writer().writeUTF(item.getInfo());
+                                Char.myCharz().arrItemBody[k].content = msg.reader().readUTF();// message.writer().writeUTF(item.getContent());
+                                int num8 = msg.reader().readUnsignedByte();// message.writer().writeByte(item.getItemOptions().size());
                                 if (num8 != 0)
                                 {
                                     Char.myCharz().arrItemBody[k].itemOption = new ItemOption[num8];
@@ -5912,24 +6183,24 @@ public class Controller : IMessageHandler
                         catch (Exception)
                         {
                         }
-                        Char.myCharz().arrItemBag = new Item[msg.reader().readByte()];
+                        Char.myCharz().arrItemBag = new Item[msg.reader().readByte()];// size item bag
                         GameScr.hpPotion = 0;
                         GameScr.isudungCapsun4 = false;
                         GameScr.isudungCapsun3 = false;
                         for (int m = 0; m < Char.myCharz().arrItemBag.Length; m++)
                         {
-                            short num9 = msg.reader().readShort();
+                            short num9 = msg.reader().readShort();// message.writer().writeShort(item.getTemplate().id());
                             if (num9 == -1)
                             {
                                 continue;
                             }
                             Char.myCharz().arrItemBag[m] = new Item();
                             Char.myCharz().arrItemBag[m].template = ItemTemplates.get(num9);
-                            Char.myCharz().arrItemBag[m].quantity = msg.reader().readInt();
-                            Char.myCharz().arrItemBag[m].info = msg.reader().readUTF();
-                            Char.myCharz().arrItemBag[m].content = msg.reader().readUTF();
+                            Char.myCharz().arrItemBag[m].quantity = msg.reader().readInt();// message.writer().writeInt(item.getQuantity());
+                            Char.myCharz().arrItemBag[m].info = msg.reader().readUTF();// message.writer().writeUTF(item.getInfo());
+                            Char.myCharz().arrItemBag[m].content = msg.reader().readUTF();// message.writer().writeUTF(item.getContent());
                             Char.myCharz().arrItemBag[m].indexUI = m;
-                            sbyte b7 = msg.reader().readByte();
+                            sbyte b7 = msg.reader().readByte();// message.writer().writeByte(item.getItemOptions().size());
                             if (b7 != 0)
                             {
                                 Char.myCharz().arrItemBag[m].itemOption = new ItemOption[b7];
@@ -5960,21 +6231,21 @@ public class Controller : IMessageHandler
                                     break;
                             }
                         }
-                        Char.myCharz().arrItemBox = new Item[msg.reader().readByte()];
+                        Char.myCharz().arrItemBox = new Item[msg.reader().readByte()];// message.writer().writeByte(items.size());
                         GameCanvas.panel.hasUse = 0;
                         for (int num10 = 0; num10 < Char.myCharz().arrItemBox.Length; num10++)
                         {
-                            short num11 = msg.reader().readShort();
+                            short num11 = msg.reader().readShort();//message.writer().writeShort(item.getTemplate().id());
                             if (num11 == -1)
                             {
                                 continue;
                             }
                             Char.myCharz().arrItemBox[num10] = new Item();
                             Char.myCharz().arrItemBox[num10].template = ItemTemplates.get(num11);
-                            Char.myCharz().arrItemBox[num10].quantity = msg.reader().readInt();
-                            Char.myCharz().arrItemBox[num10].info = msg.reader().readUTF();
-                            Char.myCharz().arrItemBox[num10].content = msg.reader().readUTF();
-                            Char.myCharz().arrItemBox[num10].itemOption = new ItemOption[msg.reader().readByte()];
+                            Char.myCharz().arrItemBox[num10].quantity = msg.reader().readInt();// message.writer().writeInt(item.getQuantity());
+                            Char.myCharz().arrItemBox[num10].info = msg.reader().readUTF();// message.writer().writeUTF(item.getInfo());
+                            Char.myCharz().arrItemBox[num10].content = msg.reader().readUTF();// message.writer().writeUTF(item.getContent());
+                            Char.myCharz().arrItemBox[num10].itemOption = new ItemOption[msg.reader().readByte()];// message.writer().writeByte(item.getItemOptions().size());
                             for (int num12 = 0; num12 < Char.myCharz().arrItemBox[num10].itemOption.Length; num12++)
                             {
                                 ItemOption itemOption3 = readItemOption(msg);
@@ -5999,18 +6270,27 @@ public class Controller : IMessageHandler
                         short num14 = msg.reader().readShort();
                         Char.idHead = new short[num14];
                         Char.idAvatar = new short[num14];
+                        //var filemew = "F://SQL//item_head.sql";
                         for (int num15 = 0; num15 < num14; num15++)
                         {
                             Char.idHead[num15] = msg.reader().readShort();
                             Char.idAvatar[num15] = msg.reader().readShort();
+                            //string queryTileType = "INSERT INTO item_head (head_id, avatar_id) " +
+                            // $"VALUES ({Char.idHead[num15]}, {Char.idAvatar[num15]});\n";
+                            //File.AppendAllText(filemew, queryTileType);
                         }
+
                         for (int num16 = 0; num16 < GameScr.info1.charId.Length; num16++)
                         {
                             GameScr.info1.charId[num16] = new int[3];
                         }
-                        GameScr.info1.charId[Char.myCharz().cgender][0] = msg.reader().readShort();
-                        GameScr.info1.charId[Char.myCharz().cgender][1] = msg.reader().readShort();
-                        GameScr.info1.charId[Char.myCharz().cgender][2] = msg.reader().readShort();
+                        var frame1 = msg.reader().readShort();
+                        var frame2 = msg.reader().readShort();
+                        var avatar = msg.reader().readShort();
+                        GameScr.info1.charId[Char.myCharz().cgender][0] = frame1;
+                        GameScr.info1.charId[Char.myCharz().cgender][1] = frame2;
+                        GameScr.info1.charId[Char.myCharz().cgender][2] = avatar;
+                        //Debug.LogError("frame1: " + frame1 +  " frame2: " + frame2 + " avatar: " + avatar);
                         Char.myCharz().isNhapThe = msg.reader().readByte() == 1;
                         Res.outz("NHAP THE= " + Char.myCharz().isNhapThe);
                         GameScr.deltaTime = mSystem.currentTimeMillis() - (long)msg.reader().readInt() * 1000L;

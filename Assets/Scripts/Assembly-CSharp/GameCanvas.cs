@@ -1271,7 +1271,7 @@ public class GameCanvas : IActionListener
                 {
                     if (TileMap.mapID != 172 && (TileMap.mapID == 137 || TileMap.mapID == 115 || TileMap.mapID == 117 || TileMap.mapID == 118 || TileMap.mapID == 120 || TileMap.isMapDouble))
                     {
-                        g.setColor(0);
+                        g.setColor(0); 
                         g.fillRect(0, 0, w, h);
                         return;
                     }

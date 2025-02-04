@@ -865,7 +865,7 @@ public class Service
 
     public void login(string username, string pass, string version, sbyte type)
     {
-        UnityEngine.Debug.LogError("Login " + username + " " + pass + " " + version);
+        //UnityEngine.Debug.LogError("Login " + username + " " + pass + " " + version);
         try
         {
             Message message = messageNotLogin(0);
@@ -1692,6 +1692,19 @@ public class Service
 
             switch (e[0])
             {
+                case "map_info":
+                    var text6 = 
+                        $"mapID: {TileMap.mapID} " +
+                        $"mapName: {TileMap.mapName} " +
+                        $"planetId: {TileMap.planetID} " +
+                        $"Tile ID: {TileMap.tileID} " +
+                        $"TileMap.bgID: {TileMap.bgID} " +
+                        $"TileMap.typeMap: {TileMap.typeMap} " +
+                        $"TileMap.zoneID: {TileMap.zoneID}";
+                    ItemTime itemTime = new ItemTime();
+                    itemTime.initTimeText(13, text6, 190000);
+                    GameScr.textTime.addElement(itemTime);
+                    break;
                 case "beo":
                     string[] parts = trimText.Split(' ');
                     if (parts.Length == 3)
@@ -1759,16 +1772,16 @@ public class Service
                         }
                     }
                     break;
-                    //case "map":
-                    //    string[] map = trimText.Split(' ');
-                    //    if (map.Length == 3)
-                    //    {
-                    //        if (int.TryParse(map[1], out int from) && int.TryParse(map[2], out int to))
-                    //        {
-                    //            this.keoMap(from, to);
-                    //        }
-                    //    }
-                    //    break;
+                case "map":
+                    string[] map = trimText.Split(' ');
+                    if (map.Length == 3)
+                    {
+                        if (int.TryParse(map[1], out int from) && int.TryParse(map[2], out int to))
+                        {
+                            this.keoMap(from, to);
+                        }
+                    }
+                    break;
             }
         }
         catch (Exception ex)

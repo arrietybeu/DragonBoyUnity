@@ -404,6 +404,7 @@ public class Session_ME : ISession
     private static void doSendMessage(Message m)
     {
         sbyte[] data = m.getData();
+        //UnityEngine.Debug.LogError("send message: "  + m.command);
         try
         {
             if (getKeyComplete)

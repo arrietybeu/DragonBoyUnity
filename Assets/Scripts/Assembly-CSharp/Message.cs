@@ -12,7 +12,7 @@ public class Message
     public Message(int command, params string[] type)
     {
 
-        string filePath = "E:\\log.txt";
+        string filePath = "F:\\log.txt";
         using (StreamWriter writer = new StreamWriter(filePath, true))
         {
             if (type != null && type.Length > 0)
@@ -38,7 +38,7 @@ public class Message
 
     public Message(sbyte command, params string[] type)
     {
-        string filePath = "E:\\log.txt";
+        string filePath = "F:\\log.txt";
         using (StreamWriter writer = new StreamWriter(filePath, true))
         {
             if (type != null && type.Length > 0)
